@@ -1,0 +1,12 @@
+[project]
+name = "aias-pin"
+version = "1.0.0"
+description = "PIN — P2P Inference Network (server-side), distilled from AiAS for examination under BUSL 1.1"
+license = { text = "BUSL-1.1" }
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+# Same setting as the source monolith: the PIN streaming tests are async;
+# strict mode would silently skip every coroutine test.
+asyncio_mode = "auto"
+testpaths = ["tests"]
